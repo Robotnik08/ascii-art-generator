@@ -1,0 +1,70 @@
+.colors {
+    display: flex;
+}
+
+* {
+    font-family: monospace;
+    color: white;
+}
+
+input {
+    color: black;
+}
+
+body {
+    background-color: #31313f;
+}
+
+.color {
+    cursor: pointer;
+    background-color: #000011;
+    border: 1px solid black;
+    border-radius: 3px;
+    font-size: 70px;
+}
+
+.a-canvas {
+    border: 1px solid white;
+}
+
+.selected-color {
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+}
+
+.cell {
+    /* force it to be 1 character wide */
+    width: 1ch;
+    /* height: 4ch; */
+    border: 0;
+    padding: 0;
+    font-size: 4ch;
+    padding:0;
+    background-color: #000011;
+}
+
+.row {
+    margin: 0;
+}
+
+.preview {
+    margin: 10px;
+    background-color: #000011;
+}
+
+textarea {
+    width: 100%;
+    field-sizing: content;
+    resize: none;
+    background-color: #000011;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px;
+    background-color: #000011;
+    border: 1px solid white;
+    border-radius: 3px;
+    cursor: pointer;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascii Art Generator</title>
+    <script src="assets/js/main.js" defer></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/ascii-art.css">
+</head>
+<body>
+    <div class="config">
+        <label for="width">Width:</label>
+        <input type="number" id="width" value="10">
+        <label for="height">Height:</label>
+        <input type="number" id="height" value="10">
+        <button id="apply">Apply</button>
+
+        <div class="colors">
+
+            <div class="selected-color"></div>
+        </div>
+    </div>
+
+    <div class="a-canvas"></div>
+    <h2>Preview: <button id="generate-preview">Generate Art</button></h2>
+    <div class="preview"></div>
+    <textarea readonly='true' class="output"></textarea>
+
+    <button id="copy">Copy to clipboard</button>
+    <a href="assets/css/ascii-art.css" download>Download CSS</a>
+
+</body>
+</html>
