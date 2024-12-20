@@ -152,6 +152,11 @@ function update_canvas() {
                     }
                 }
             });
+
+            input.addEventListener('input', (e) => {
+                // cancel this event
+                e.preventDefault();
+            });
         }
 
         canvas.appendChild(row);
