@@ -16,11 +16,11 @@
 .a-maroon { color: maroon; }
 .a-lime { color: lime; }
 
-.a-glow-white { color: white; text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white, 0 0 60px white, 0 0 70px white; }
-.a-glow-red { color: red; text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 50px red, 0 0 60px red, 0 0 70px red; }
-.a-glow-green { color: green; text-shadow: 0 0 10px green, 0 0 20px green, 0 0 30px green, 0 0 40px green, 0 0 50px green, 0 0 60px green, 0 0 70px green; }
-.a-glow-blue { color: blue; text-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue, 0 0 40px blue, 0 0 50px blue, 0 0 60px blue, 0 0 70px blue; }
-.a-glow-magenta { color: magenta; text-shadow: 0 0 10px magenta, 0 0 20px magenta, 0 0 30px magenta, 0 0 40px magenta, 0 0 50px magenta, 0 0 60px magenta, 0 0 70px magenta; }
-.a-glow-cyan { color: cyan; text-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 30px cyan, 0 0 40px cyan, 0 0 50px cyan, 0 0 60px cyan, 0 0 70px cyan; }
-.a-glow-yellow { color: yellow; text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px yellow, 0 0 50px yellow, 0 0 60px yellow, 0 0 70px yellow; }
-.a-glow-gold { color: goldenrod; text-shadow: 0 0 10px goldenrod, 0 0 20px goldenrod, 0 0 30px goldenrod, 0 0 40px goldenrod, 0 0 50px goldenrod, 0 0 60px goldenrod, 0 0 70px goldenrod; }
+.a-glow-white { color: white; text-shadow: 0 0 8px white, 0 0 16px white, 0 0 24px white, 0 0 32px white, 0 0 40px white, 0 0 48px white; }
+.a-glow-red { color: red; text-shadow: 0 0 8px red, 0 0 16px red, 0 0 24px red, 0 0 32px red, 0 0 40px red, 0 0 48px red; }
+.a-glow-green { color: green; text-shadow: 0 0 8px green, 0 0 16px green, 0 0 24px green, 0 0 32px green, 0 0 40px green, 0 0 48px green; }
+.a-glow-blue { color: blue; text-shadow: 0 0 8px blue, 0 0 16px blue, 0 0 24px blue, 0 0 32px blue, 0 0 40px blue, 0 0 48px blue; }
+.a-glow-magenta { color: magenta; text-shadow: 0 0 8px magenta, 0 0 16px magenta, 0 0 24px magenta, 0 0 32px magenta, 0 0 40px magenta, 0 0 48px magenta; }
+.a-glow-cyan { color: cyan; text-shadow: 0 0 8px cyan, 0 0 16px cyan, 0 0 24px cyan, 0 0 32px cyan, 0 0 40px cyan, 0 0 48px cyan; }
+.a-glow-yellow { color: yellow; text-shadow: 0 0 8px yellow, 0 0 16px yellow, 0 0 24px yellow, 0 0 32px yellow, 0 0 40px yellow, 0 0 48px yellow; }
+.a-glow-gold { color: goldenrod; text-shadow: 0 0 8px goldenrod, 0 0 16px goldenrod, 0 0 24px goldenrod, 0 0 32px goldenrod, 0 0 40px goldenrod, 0 0 48px goldenrod; }

@@ -200,6 +200,10 @@ function updatePreview () {
     for (let y = 0; y < canvas_height; y++) {
 
         for (let x = 0; x < canvas_width; x++) {
+            if (canvas_data[y][x] === ' ') {
+                container.innerHTML += ' ';
+                continue;
+            }
             const cell = document.createElement('span');
             cell.classList.add('a-' + canvas_color_data[y][x]);
             cell.innerHTML = canvas_data[y][x];
