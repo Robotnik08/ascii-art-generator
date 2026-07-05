@@ -108,6 +108,27 @@ function update_canvas() {
 
 
             input.addEventListener('keydown', (e) => {
+                // Ctrl + V
+                if (e.ctrlKey && e.key === 'v') {
+                    navigator.clipboard.readText().then(text => {
+                        // split the text by newlines
+                        const lines = text.split('\n');
+                        for (let i = 0; i < lines.length; i++) {
+                            if (y + i >= canvas_height) break;
+                            const line = lines[i].substring(0, canvas_width).trimEnd();
+                            for (let j = 0; j < line.length; j++) {
+                                if (x + j >= canvas_width) break;
+                                canvas_data[y + i][x + j] = line[j];
+                                canvas_color_data[y + i][x + j] = selected_color;
+                            }
+                        }
+                        updateInputs();
+                        updatePreview();
+                    });
+                    e.preventDefault();
+                    return;
+                }
+
                 if (e.key === 'Backspace' || e.key === 'Delete') {
                     canvas_data[y][x] = ' ';
                     input.value = canvas_data[y][x];
@@ -134,8 +155,24 @@ function update_canvas() {
                         }
                     }
                 } else {
-                    if (e.key.length === 1) {
-                        canvas_data[y][x] = e.key;
+                    let key_value = e.key;
+                    if (e.key === 'Dead') {
+                        switch (e.code) {
+                            case 'Quote':
+                                if (e.shiftKey) {
+                                    key_value = '"';
+                                } else {
+                                    key_value = "'";
+                                }
+                                break;
+                            default:
+                                key_value = '';
+                                break;
+                        }
+                    }
+                    
+                    if (key_value !== '' && key_value.length === 1) {
+                        canvas_data[y][x] = key_value;
                         input.value = canvas_data[y][x];
                         canvas_color_data[y][x] = selected_color;
                         // clear all color classes
@@ -150,7 +187,11 @@ function update_canvas() {
                             canvas.children[y + 1].children[0].focus();
                         }
                     }
+                                
                 }
+
+                updatePreview();
+                updateInputs();
             });
 
             input.addEventListener('input', (e) => {
@@ -198,7 +239,7 @@ function updatePreview () {
     preview.innerHTML = '';
     const container = document.createElement('pre');
     for (let y = 0; y < canvas_height; y++) {
-
+        container.innerHTML += '║';
         for (let x = 0; x < canvas_width; x++) {
             if (canvas_data[y][x] === ' ') {
                 container.innerHTML += ' ';
@@ -209,11 +250,21 @@ function updatePreview () {
             cell.innerHTML = canvas_data[y][x];
             container.appendChild(cell);
         }
-        container.innerHTML += '\n';
+        container.innerHTML += '║\n';
     }
     preview.appendChild(container);
 
     output.innerHTML = container.innerHTML;
+}
+
+function updateInputs() {
+    for (let y = 0; y < canvas_height; y++) {
+        for (let x = 0; x < canvas_width; x++) {
+            const input = canvas.children[y].children[x];
+            input.value = canvas_data[y][x];
+            input.className = 'cell a-' + canvas_color_data[y][x];
+        }
+    }
 }
 
 generate_preview.addEventListener('click', updatePreview);

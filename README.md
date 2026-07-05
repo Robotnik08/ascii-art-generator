@@ -20,3 +20,4 @@ Dowload the project, or navigate to the [github page](https://robotnik08.github.
 - Use any size
 - Intuitive and easy to use.
 - Glowing text effect.
+- Copy paste support.
